@@ -1,0 +1,8 @@
+# never commit secrets or scratch state
+.env
+*.token
+.netrc
+__pycache__/
+*.pyc
+.claude/
+.courtify-upload-*.json

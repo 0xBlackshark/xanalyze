@@ -1,0 +1,161 @@
+{
+  "slug": "clickihood",
+  "schema_version": "1.0",
+  "name": "Clickihood",
+  "aliases": [
+    "Clickihood club"
+  ],
+  "rank": 5,
+  "status": "mint เสร็จ; community NFT",
+  "links": {
+    "x": null,
+    "site": null,
+    "docs": null,
+    "related": []
+  },
+  "chain": "Ethereum (mainnet) — free mint 9,999",
+  "legal_entity": "ไม่ระบุ",
+  "score": {
+    "interest": 4.0,
+    "trust": 3.0
+  },
+  "field2_interest": "4.0/10 — ไม่มีต้นทุนเข้า จึงเป็น case ที่ค่าเสียโอกาสต่ำสุด; โอกาสคือ airdrop/utility ที่ยังไม่ประกาศ",
+  "trust_evidence": [
+    "on-chain: totalSupply 9,999 (free mint); contract balance 0 ETH => ไม่มีเงินผู้ใช้ค้าง",
+    "on-chain: holders 711 (แก้จากตัวเลข ~3,600 ที่เคยรายงานผิด), top-10 ถือ 29.5% => concentration ปกติ ไม่เป็น whaling",
+    "on-chain: royalty 1%; metadata ยัง unfrozen => ทีมเปลี่ยนภาพได้ (ทั้งเพิ่มและลดมูลค่า)",
+    "rarity audit: realized 3,988 / 3,024 / 2,021 / 860 / 106 (5 ชั้น) เทียบน้ำหนักที่เคลม 62/23/10/4/1% => ชั้น 1 ออก 39.9% (น้อยกว่าที่ควร 62%) และชั้นหายากออกจริงมากเกินสัดส่วน => เครื่องสุ่มไม่ตรง สเปก (หรือ สเปกไม่ได้อัปเดตตามของจริง)"
+  ],
+  "model": "Community NFT + points/engagement play; ไม่มี gacha, ไม่มี token; รายได้ทีม (ถ้ามี) จาก royalty 1%",
+  "how_to_play": [
+    "ตรวจ: totalSupply/holderCount/top10 บนเชน + ตรวจว่า metadata ถูก freeze หรือยัง",
+    "เข้า: ไม่มี mint แล้ว — ซื้อตลาดรองที่ floor (เคยวัดได้ 0.00365 ETH) หรือรอ allowlist event",
+    "ออก: royalty 1% + floor ต่ำมาก => จุดคุ้มทุนต้องพึ่ง utility ใหม่ ไม่ใช่ trading"
+  ],
+  "risks": [
+    "metadata unfrozen",
+    "ตาราง rarity ที่ประกาศไม่ตรงผลบนเชน (กระบวนการภายในไม่โปร่งใส)",
+    "holder จริง 711 = ตลาดเล็กมาก",
+    "ไม่มีทีม/entity/roadmap ที่เป็นลายลักษณ์อักษร",
+    "ตัวเลข holder เคยรายงานผิดในรอบแรก (~3,600 -> 711) => อย่าเชื่อ dashboard ใดโดยไม่วัดเอง"
+  ],
+  "value_for_money": "ฟรี (mint หมดแล้ว) — ต้นทุนเหลือ gas + ค่าซื้อตลาดรอง; ความเสี่ยงหลักคือ metadata ยังไม่ freeze",
+  "house_edge": [
+    {
+      "component": "metadata unfrozen",
+      "value": "ทีมเปลี่ยน rarity/ภาพได้หลังขาย — ไม่มี on-chain lock"
+    },
+    {
+      "component": "rarity drift",
+      "value": "น้ำหนักที่เคลม vs ผลจริงไม่ตรง (ชั้น 1 62% -> ออกจริง 39.9%)"
+    }
+  ],
+  "cost_of_entry_usd": 0,
+  "opportunity": "ค่าคาดหวังมาจาก airdrop/utility ที่อาจมา (ไม่มีหลักฐาน) ไม่ใช่ราคา; ถ้าจะลุ้น ให้ใช้เวลาดูแลกระเป๋า/สร้าง engagement แทนเงิน",
+  "returns": [
+    {
+      "budget_usd": 0,
+      "note": "free mint หมดแล้ว แต่ยังเข้าร่วม community/event ได้ = EV บวกโดยไม่มี downside",
+      "expected_usd": 0
+    },
+    {
+      "budget_usd": 50,
+      "note": "ซื้อ 1 ใบที่ floor 0.00365 ETH ~ $13.5 + gas",
+      "expected_usd": -10.0
+    },
+    {
+      "budget_usd": 200,
+      "note": "ถือรอ utility; สภาพคล่องจริงต่ำกว่าที่ราคา floor บอก",
+      "expected_usd": -40.0
+    },
+    {
+      "budget_usd": 1000,
+      "note": "ไม่ควร — floor เลื่อนได้น้อย, ไม่มีกลไกรองรับราคา",
+      "expected_usd": -300.0
+    },
+    {
+      "budget_usd": 5000,
+      "note": "ไม่มีความเสี่ยงนี้",
+      "expected_usd": 0
+    },
+    {
+      "budget_usd": 10000,
+      "note": "ไม่มีความเสี่ยงนี้",
+      "expected_usd": 0
+    }
+  ],
+  "max_sane_budget_usd": 50,
+  "capital_rule": "อย่าซื้อ; ถ้าอยากได้ให้รอ event/allowlist. งบที่สมเหตุสมผลคือ $0",
+  "history": [
+    "ตรวจพบ: free mint 9,999, holders 711 (แก้จาก ~3,600), top-10 29.5%, floor 0.00365 ETH, royalty 1%, contract balance 0 ETH, metadata unfrozen",
+    "rarity: realized 3,988/3,024/2,021/860/106 vs weights 62/23/10/4/1"
+  ],
+  "technical": {
+    "onchain": [
+      {
+        "item": "supply",
+        "finding": "9,999 free mint"
+      },
+      {
+        "item": "holders",
+        "finding": "711 (แก้จาก ~3,600)"
+      },
+      {
+        "item": "concentration",
+        "finding": "top-10 = 29.5%"
+      },
+      {
+        "item": "royalty",
+        "finding": "1%"
+      },
+      {
+        "item": "contract balance",
+        "finding": "0 ETH"
+      },
+      {
+        "item": "metadata",
+        "finding": "unfrozen => ทีมเปลี่ยนภาพได้"
+      },
+      {
+        "item": "rarity audit",
+        "finding": "realized 3,988/3,024/2,021/860/106 vs เคลม 62/23/10/4/1%"
+      }
+    ],
+    "api_endpoints": [
+      "Ethereum public RPC: totalSupply/balanceOf/ownerOf batch",
+      "note: ไม่มี archive node => rarity ต้อง enumerate ทุก tokenId"
+    ],
+    "accounts": {
+      "main": {
+        "handle": null,
+        "note": "ไม่เคยบันทึก"
+      }
+    },
+    "market": {
+      "token": "ไม่มีโทเคน"
+    }
+  },
+  "verdict_short": "Free mint 9,999 ที่ metadata ยัง unfrozen และ contract ไม่มีเงิน (0 ETH) — on-chain โปร่งใสดี (holder 711, top-10 29.5%) แต่ rarity ที่จ่ายจริงต่างจากน้ำหนักที่เคลมมาก (ชั้น 1 ออก 3,988 ใบ จากน้ำหนัก 62%) และเคยต้องแก้ตัวเลข holders จาก ~3,600 เป็น 711 => ไม่มีเงินให้เสีย แต่อย่าตีความว่า 'ฟรี = ปลอดภัย'",
+  "unverified": [
+    "X handle/เว็บไซต์ทางการ (ไม่ถูกบันทึก)",
+    "ทีม/entity",
+    "ที่มาของ randomness (on-chain VRF หรือ DB)",
+    "จำนวน holder ณ วันนี้ (ตัวเลขเป็นของวันตรวจเดิม)"
+  ],
+  "watch": [
+    "การ freeze metadata",
+    "การประกาศ utility/airdrop",
+    "การเปลี่ยนแปลง top-10 concentration",
+    "ว่าทีมแก้ตาราง rarity หรือไม่"
+  ],
+  "needs_recheck": true,
+  "stale_risk": "medium",
+  "stale_risk_note": "ตัวเลข holder/rarity ค่อนข้างนิ่ง แต่ถ้ามี mint รอบใหม่หรือ freeze จะเปลี่ยนทันที",
+  "verified_on": "2026-09 (รอบแรก — raw artifacts ไม่ได้ persist)",
+  "sources": [
+    "Ethereum mainnet RPC (public)",
+    "scanner หน้าเว็บ ณ วันตรวจ",
+    "note: raw artifacts ไม่ได้ persist"
+  ],
+  "generated_from": "generated by tools/build.py — source of truth is tools/data_*.py, edit there then rebuild"
+}

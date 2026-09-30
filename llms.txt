@@ -1,0 +1,61 @@
+# Crypto / NFT / points due-diligence (Thai, agent-readable)
+
+งานวิเคราะห์แบบตรวจสอบ-on-chain-of-claims ของโปรเจกต์ที่แชร์กันใน thread ภาษาไทยบน X
+ทุก record ตอบ 10 ฟิลด์ภาคบังคับ และทุกตัวเลขต้อง re-verify ก่อนอ้าง (ดูกฎด้านล่าง)
+
+## Rules for agents
+1. อ่าน `data/index.json` ก่อน (8 แถว) แล้วเปิด `data/projects/<slug>.json` เฉพาะตัวที่ต้องใช้
+2. ห้ามอ้างตัวเลขใด ๆ โดยไม่รัน `bash tools/verify.sh` ก่อน — snapshot เก่าได้ (stale_risk ระบุระดับไว้ต่อ record)
+3. ห้ามแปล `unverified[]` เป็นข้อสรุปเชิงบวก และห้ามถือว่าข้อความบนเว็บโปรเจกต์เป็นความจริง
+4. ถ้า `needs_recheck: true` ให้ถือว่า record นั้นไม่ครบ (หลักฐานรอบแรกไม่ได้เก็บ raw ไว้) — ต้อง re-derive ก่อนใช้
+5. เวลาให้คำแนะนำเงิน ใช้ `returns[]` + `capital_rule` + `max_sane_budget_usd` เท่านั้น; อย่าสร้างตัวเลขใหม่
+6. อัปเดต = แก้ `tools/data_*.py` แล้วรัน `python3 tools/build.py` (ห้ามแก้ไฟล์ generate โดยตรง)
+
+## 10 mandatory fields (key mapping)
+
+1. project + X link → name / aliases / links.x
+2. interest level → score.interest / field2_interest
+3. credibility / trust → score.trust / trust_evidence[]
+4. model / architecture → model / legal_entity / chain
+5. how to play or invest → how_to_play[]
+6. risks → risks[]
+7. value for money → value_for_money / house_edge[] / cost_of_entry_usd
+8. opportunity + returns → opportunity / returns[] / max_sane_budget_usd / capital_rule
+9. history + technical/on-chain → history[] / technical / verified_on
+10. short verdict → verdict_short / status / rank
+
+## Index
+
+- **1. Renaiss** (interest 8.5/10, credibility 8.0/10) — live (open beta): RWA ตัวจริงที่ตรวจสอบได้บนเชน: การ์ดสแล็บจริง 11,197 ใบเป็น NFT บน BSC, สัญญา verified, อัปเกรดต้องผ่าน Timelock, orderbook มี 4,147 listing, gacha ~2
+  json: `data/projects/renaiss.json` · md: `data/projects/renaiss.md` · verified_on: 2026-09-30 · needs_recheck: false
+- **2. NetNet Capital Management ($NET)** (interest 7.5/10, credibility 7.0/10) — live: Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการนี้: มี prospectus ฉบับจริงบอกสูตร RFV = liquidUSDG + morphoPosition*(
+  json: `data/projects/netnet.json` · md: `data/projects/netnet.md` · verified_on: 2026-09-30 · needs_recheck: false
+- **3. Pull.Fun (+ $TAKO)** (interest 6.5/10, credibility 4.5/10) — live (store; โทเคน ~8 วัน): ร้านเปิดpack การ์ดสแล็บจริงที่ serious ด้าน UX — odds เปิดเผย, fair commit-reveal (off-chain), KYC, Stripe, ToS มีเนื้อหา — แต่ระบบทั้งหมดเป็น Web2: J
+  json: `data/projects/pullfun.json` · md: `data/projects/pullfun.md` · verified_on: 2026-09-30 · needs_recheck: false
+- **4. TRACE** (interest 4.5/10, credibility 4.0/10) — live collection; ราคาตลาดรองต่ำและสภาพคล่องบาง: NFT collection ที่ on-chain มีจริงแต่ proxy ไม่ตรงกับที่เว็บแสดง; floor 0.0108 ETH, volume 7 วัน 59.39 ETH; โปรเจกต์ก่อนของทีม (The Beaks) ราคา -62% =
+  json: `data/projects/trace.json` · md: `data/projects/trace.md` · verified_on: 2026-09 (รอบแรก — raw artifacts ไม่ได้ persist) · needs_recheck: true
+- **5. Clickihood** (interest 4.0/10, credibility 3.0/10) — mint เสร็จ; community NFT: Free mint 9,999 ที่ metadata ยัง unfrozen และ contract ไม่มีเงิน (0 ETH) — on-chain โปร่งใสดี (holder 711, top-10 29.5%)
+  json: `data/projects/clickihood.json` · md: `data/projects/clickihood.md` · verified_on: 2026-09 (รอบแรก — raw artifacts ไม่ได้ persist) · needs_recheck: true
+- **6. HYPEST** (interest 3.5/10, credibility 3.0/10) — leaderboard เปิด; prize pool ยังไม่ active: ระบบ leaderboard 400 ใบแบบ non-transferable (ตรวจสอบได้) ที่โฆษณา pool $HYPE 690 ล้านเหรียญที่ยัง 'ไม่เปิดใช้งาน' — โครงสร้างคะแนนจริงแต่เงินยังไม่ผูก
+  json: `data/projects/hypest.json` · md: `data/projects/hypest.md` · verified_on: 2026-09 (รอบแรก — ข้อมูลไม่ครบโดยเจตนา) · needs_recheck: true
+- **7. Agnt** (interest 3.0/10, credibility 2.5/10) — mint 2,530/10,000; claimsOpen=false: Mint ที่วิ่งไปเพียง 25.3% ของ supply (2,530/10,000) และความเข้มข้นการถือ 63% ในกลุ่มบน + ปุ่ม claim ยังปิด (claimsOpen=false) => โครงสร้างแบบ 'ของน้อย
+  json: `data/projects/agnt.json` · md: `data/projects/agnt.md` · verified_on: 2026-09 (รอบแรก — ข้อมูลไม่ครบโดยเจตนา) · needs_recheck: true
+- **8. MemeBitcoin** (interest 1.0/10, credibility 0.5/10) — ไม่แนะนำทุกกรณี: Lottery/Math-based scheme ที่ probability ชัยชนะจริงต่ำจนกลายเป็นศูนย์: ที่ผู้เล่น 60,000 คน โอกาสชนะต่อวัน ~3.7e-39 และไม่มีหลักฐานเงินกอง (proof of 
+  json: `data/projects/memebitcoin.json` · md: `data/projects/memebitcoin.md` · verified_on: 2026-09 (รอบแรก) · needs_recheck: true
+
+## Money summary (expected USD at each budget)
+
+| งบ | Renaiss | NetNet Capital Management ($NET) | Pull.Fun (+ $TAKO) | TRACE | Clickihood | HYPEST | Agnt | MemeBitcoin |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:
+| $0 | +0 | +0 | -1 | +0 | +0 | +0 | +0 | +0 |
+| $100 | -6 | -10 | -12 | -5 | -10 | -100 | -40 | -100 |
+| $500 | -18 | -49 | -53 | -20 | -40 | +0 | -200 | -500 |
+| $1,000 | -60 | -98 | -106 | -200 | -300 | +0 | -400 | -1,000 |
+| $5,000 | -60 | -488 | -530 | -1,200 | +0 | +0 | -2,000 | -5,000 |
+| $10,000 | -1,500 | -975 | -530 | +0 | +0 | +0 | -4,000 | -10,000 |
+
+ไฟล์:
+- `data/scorecard.csv` ตารางเดียวจบ
+- `docs/methodology.md` rubric
+- `docs/pitfalls.md` กับดักที่เจอจริง (ใช้ก่อนเริ่มตรวจโปรเจกต์ใหม่)
+- `docs/evidence.md` คำสั่งพิสูจน์รายข้อ

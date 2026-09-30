@@ -1,0 +1,230 @@
+{
+  "slug": "pullfun",
+  "schema_version": "1.0",
+  "name": "Pull.Fun (+ $TAKO)",
+  "aliases": [
+    "pull.fun",
+    "PullFun",
+    "TAKO points"
+  ],
+  "rank": 3,
+  "status": "live (store; โทเคน ~8 วัน)",
+  "links": {
+    "x": "https://x.com/pulldotfun",
+    "site": "https://pull.fun",
+    "docs": null,
+    "api": "https://api.pull.fun/openapi.json",
+    "related": [
+      "https://x.com/takopull",
+      "https://robinhoodchain.blockscout.com/token/0xd6c0651a0c3f24BBF2794187285a66Da753A1D79",
+      "https://www.geckoterminal.com/robinhood/pools/0x0db676195d2da690afe67ff27444d941bcd7c056e2f512f40eb14620f3f0ead8"
+    ]
+  },
+  "chain": "ไม่มี smart contract ฝั่งเกม (ระบบเป็น DB ทั้งหมด) — มีแค่ $TAKO อยู่บน Robinhood Chain (chainId 4663) ตรวจวันนี้",
+  "legal_entity": "ไม่พบชื่อนิติบุคคลใน ToS — ใช้ '© Pull Fun 2026', email legal@pull.fun, กฎหมาย Delaware + arbitration",
+  "score": {
+    "interest": 6.5,
+    "trust": 4.5
+  },
+  "field2_interest": "product 6.5/10 | token 2/10 — แยกแยะให้ชัด: app แข็งแรงกว่า peer ใน หลวดหมวด; ส่วนโทเคนเป็นเดิมพันอายุ 7 วันที่ liquidity ยังตื้น",
+  "trust_evidence": [
+    "JS bundle 3.27 MB (71 chunks): grep ครบหลัง curl ใหม่ (file ไม่ persist, ต้องทำใหม่ทุกครั้ง) => 0 contract addresses สำหรับ gacha/custody, ไม่มี ethers/viem/wagmi ที่ส่วนของเกม => Web2 store บน DB",
+    "site admit (ใน FAQ): ระบบพิสูจน์ของเขา 'does not prove physical inventory or shipping' — ตรงจนน่าแปลก แต่นั่นคือ admissions ที่ไม่ควรเพิกเฉย",
+    "off-chain provable fair (มีใน ToS + /proof, verify ที่เว็บเอง): server seed 32 bytes, commitment = SHA-256(seed), epoch/recharge ต่อ restock, ต่อ draw HMAC-SHA256(version|packId|epochId|packPullIndex|clientNonce|poolSnapshotHash), poolSnapshotHash = hash ของ sorted JSON ของ pool คงเหลือ — แต่ไม่ลงบนเชน",
+    "$TAKO (Robinhood, 0xd6c0651a0c3f24BBF2794187285a66Da753A1D79): พูลวาล์วจริงเดียว — TAKO/WETH pair 0x0db676195d2da690afe67ff27444d941bcd7c056e2f512f40eb14620f3f0ead8 (created 2026-09-23 06:12 UTC), reserve $81,944, FDV $504,093, volume h24 $3,913, ผู้ซื้อ 16/ผู้ขาย 14 ใน 24 ชม.",
+    "correction: บันทึกรอบก่อนระบุ chain=Monad + เชื่อม CoinGecko id 'tako' (ตัวนั้นเป็น Ethereum อีกเหรียญ 420B supply) — แก้เป็น Robinhood Chain แล้ว"
+  ],
+  "model": "E-commerce + gamification Web2 (Next.js/Vercel, Sanity CMS, PostHog/Sentry, Google Ads tag AW-18148001195, Stripe + เงินฝากคริปโตหลายเชน); รายได้จาก house margin บน odds (EV -10.6% ต่อ pack) + haircut ตอนขายกลับ (90% ภายใน 1 ชม. → 80% หลังจากนั้น); โหมด yield ที่เขามีจริงคือ consignment: ฝากการ์ดเข้า pack pool แล้วกินส่วนแบ่งทุก pull ของผู้เล่นอื่น (APR คิดจาก 14 วันย้อนหลังของ pool, lifetime cap ล็อกตอน consign, ถ้าใบถูกดึงจ่าย 85% ของ market value — จ่ายเงินสด)",
+  "how_to_play": [
+    "เปิดแอคเคาท์ + wallet (Privy-style) → ฝาก crypto ผ่านเชนที่รองรับ (Robinhood/Base/Arbitrum/Solana/Hyperliquid) หรือตรงด้วย USDG",
+    "ซื้อ pack ที่ราคา $5 Champion / $10 / $15 / $21 / $33 — EV -10.6% ขึ้นตาม Guaranteed of return",
+    "ทางออก: ขายกลับทันที 90% (1 ชม.แรก) → 80% หลังจากนั้น, หรือถือเพื่อ consign yield, ถอนเงินโดน KYC admin review"
+  ],
+  "risks": [
+    "คลังตรวจสอบไม่ได้: ไม่มี on-chain receipt/serial attestation; ถ้าเขาทิ้งของคุณ arbitration กับนิติบุคคลนิรนามในดีลาแวร์",
+    "$TAKO มี reserve เพียง $81,944 ต่อ MC $503,785 (16.3%) => การเข้าออก >= $5k ต้องราคาลากเอง",
+    "ราคาร่วงจากไฮวันแรก -88%; volume h24 ต่ำ $3.9k บางทีเท่านั้น",
+    "geo/legal: ToS บล็อกเขตห้ามการพนัน; ไทยห้ามออนไลน์แบบ armature; คุณต้องตัดสินเองแบบระมัดระวัง",
+    "การถอนต้องผ่าน KYC + admin review (~24 ชม.) และ fiduciaries ไม่มี betting protections",
+    "Confusion: มี TAKO อื่นๆ เต็ม (Ethereum 'Tako' 420B, Solana pump tokens, Pull.Fun clone บน solana ด้วย) — ห้ามซื้อผิดเชน"
+  ],
+  "value_for_money": "เหมาะในฐานะที่เล่นบันเทิงราคาถูก — odds เปิดเผย, sell-back 90/80%, fair-verify off-chain; แต่ไม่มี on-chain escrow เรื่องในคลังและ $TAKO (Robinhood) เป็นลอตเตอรี่ 7 วัน: reserve $81,944 ต่อ MC $503,785 (16.3%), ลง 88% จากไฮวันแรก",
+  "house_edge": [
+    {
+      "machine": "Champion $5",
+      "price_usd": 5,
+      "ev_usd": 4.47,
+      "ev_over_price": "-10.6%"
+    },
+    {
+      "machine": "PULL $10",
+      "price_usd": 10,
+      "ev_usd": 8.94,
+      "ev_over_price": "-10.6%"
+    },
+    {
+      "machine": "PULL $15",
+      "price_usd": 15,
+      "ev_usd": 13.41,
+      "ev_over_price": "-10.6%"
+    },
+    {
+      "machine": "PULL $21",
+      "price_usd": 21,
+      "ev_usd": 18.77,
+      "ev_over_price": "-10.6%"
+    },
+    {
+      "machine": "PULL $33",
+      "price_usd": 33,
+      "ev_usd": 29.48,
+      "ev_over_price": "-10.6%"
+    },
+    {
+      "component": "sell-back haircut",
+      "value": "90% in 1h -> 80% after => -10% ถึง -20% ต่อรอบ (แม้ยังไม่นับ market movement)"
+    },
+    {
+      "component": "$TAKO market",
+      "value": "reserve $81.9k ต่อ FDV $504k — เล่นน้อยlottery เท่านั้น, ระบบ liquidity ยังตื้น"
+    },
+    {
+      "component": "geoblock",
+      "value": "ToS บล็อกเขตห้ามการพนัน — ไทยต้องตัดสินเอง; ถอนเงินโดน KYC + admin review"
+    }
+  ],
+  "cost_of_entry_usd": 10,
+  "opportunity": "ด้าน product: odds เปิดเผย + edge ต่ำสุดใน class ทำให้เป็นที่เล่นบันเทิงที่ถูกที่สุดในชุดนี้; ด้าน token: ไม่มี utility/on-chain proof — มีแค่รอ Season 2 announcement ที่ไม่มีกำหนด; ถ้าจะเล่น $TAKO ให้จำกัด size ไว้ต่ำและตั้ง stop ที่ liquidity หด",
+  "returns": [
+    {
+      "budget_usd": 10,
+      "note": "ทดลอง pull 1-2 ใบ; คาดหวัง loss เล็ก",
+      "expected_usd": -1.06
+    },
+    {
+      "budget_usd": 50,
+      "note": "สเล่น 5 ใบ; คาดหวัง -10.6%±variance",
+      "expected_usd": -5.3
+    },
+    {
+      "budget_usd": 100,
+      "note": "เล่นฤดูกาลเปิด leap; ค่าเฉลี่ยยังเป็นลบ",
+      "expected_usd": -11.6
+    },
+    {
+      "budget_usd": 500,
+      "note": "ทดสอบ consign yield (เสี่ยง counterparty เต็ม)",
+      "expected_usd": -53.0
+    },
+    {
+      "budget_usd": 1000,
+      "note": "สำหรับผู้ฝากการ์ดไว้เล่น APR (ที่ prospectus ของพวกเขามีแบบนี้)",
+      "expected_usd": -106.0
+    },
+    {
+      "budget_usd": 5000,
+      "note": "ไม่ควรเข้า — position ใหญ่กว่า exit depth อยู่ในทุกเสностนาคี",
+      "expected_usd": -530.0
+    }
+  ],
+  "max_sane_budget_usd": 500,
+  "capital_rule": "เป็นสถานที่เล่นบันเทิงได้ ($10-500) — ห้าม carry position เกินอย่างละเอียด คุณไม่มีทางฟ้องเขาถ้าของหาย; >= $TAKO: จำกัด $600-2,000 ต่อ position (reserve ของพูลคือ $81.9k เฉพาะ) และ exit ทันทีเมื่อ reserve/MC < 10%",
+  "history": [
+    "2026-03-20 เปิด @pulldotfun",
+    "2026-04-02 ToS ฉบับล่าสุด",
+    "2026-09-10 เปิด @takopull",
+    "2026-09-23 06:12 สร้างพูล TAKO/WETH บน Robinhood Chain",
+    "2026-09-23 วันแรก: O $0.0001719 -> H $0.0042677 -> C $0.0008298, vol $933,452 (ชั่วโมงแรก $732,673) [recorded previous session]",
+    "09-24 ถึง 09-27: -20.5, +22.5, -12.1, -2.0% | 09-28 -48.1 | 09-29 +20.7 | 09-30 $0.0005037, MC $503,785, reserve $81,944",
+    "correction 2026-09-30: แก้ chain=Monad -> Robinhood Chain (DexScreener/GeckoTerminal แสดงชัดว่าเป็น robinhood) + ลิงก์ CoinGecko id=tako ที่ผิด"
+  ],
+  "technical": {
+    "onchain": [
+      {
+        "item": "$TAKO token (มีจริงบนเชน) — แต่ไม่ฟื้น custody ใด ๆ",
+        "addr": "0xd6c0651a0c3f24BBF2794187285a66Da753A1D79",
+        "finding": "grep bundle 3.27 MB ไม่พบ contract สำหรับฝั่งเกม; สิ่งเดียวที่อยู่บนเชนคือโทเคน + พูลมันเอง"
+      },
+      {
+        "item": "TAKO/WETH pool (หลัก)",
+        "addr": "0x0db676195d2da690afe67ff27444d941bcd7c056e2f512f40eb14620f3f0ead8",
+        "finding": "created 2026-09-23 06:12:01 UTC | price $0.000504093 | reserve $81,944.26 | FDV $504,093 | txns h24 16 buys/14 sells"
+      },
+      {
+        "item": "TAKO/WETH pool (รอง), reserve $101.12",
+        "addr": "0xba4186813eb1c6e6905b34b28de46c0b638a2fd94d6ded46d55d1293a37cb771",
+        "finding": "พูลย่อยบนเชนเดียวกัน — reserve เล็กมาก ไม่มีนัยทางการเงิน"
+      }
+    ],
+    "api_endpoints": [
+      "/v0/fair/packs",
+      "/v0/fair/packs/{onChainPackId}/sets",
+      "/openapi.json (134 paths ตามที่ grep เมื่อ round ก่อน)",
+      "https://robinhoodchain.blockscout.com/token/0xd6c0651a0c3f24BBF2794187285a66Da753A1D79",
+      "https://api.geckoterminal.com/api/v2/networks/robinhood/pools/0x0db6...80ead8"
+    ],
+    "accounts": {
+      "store": {
+        "handle": "@pulldotfun",
+        "followers": 5986,
+        "tweets": 1121,
+        "joined": "2026-03-20",
+        "verified": false
+      },
+      "token": {
+        "handle": "@takopull",
+        "followers": 2045,
+        "tweets": 21,
+        "joined": "2026-09-10",
+        "verified": false
+      },
+      "friends": {
+        "handle": "@PullFunFriends",
+        "note": "currently 404 - link in footer is broken"
+      },
+      "updates": {
+        "handle": "@PullFunUpdates",
+        "note": "currently 404"
+      }
+    },
+    "market": {
+      "token": "$TAKO (Robinhood Chain)",
+      "price": 0.0005037,
+      "fdv": 504093,
+      "mc": 503785,
+      "reserve": 81944,
+      "vol_h24": 3913,
+      "created": "2026-09-23T06:12:01Z",
+      "source": "GeckoTerminal + DexScreener 2026-09-30"
+    }
+  },
+  "verdict_short": "ร้านเปิดpack การ์ดสแล็บจริงที่ serious ด้าน UX — odds เปิดเผย, fair commit-reveal (off-chain), KYC, Stripe, ToS มีเนื้อหา — แต่ระบบทั้งหมดเป็น Web2: JS bundle 3.27 MB (71 chunks) มี 0 contract address สำหรับฝั่งเกม/คลัง, และตัวเขาเองยอมรับว่าไม่พิสูจน์ inventory ได้; ด้านนักลงทุนคือโทเคนเพิ่งเกิด 7 วันบน Robinhood Chain: MC=FDV $503,785, reserve $81,944, vol24 $3,913 (16 buys / 14 sells ใน 24 ชม.)",
+  "unverified": [
+    "อายุโดเมน .fun (RDAP เงียบ)",
+    "จำนวน holder จริงของ $TAKO",
+    "ว่า LP token ถูก lock หรือไม่",
+    "จำนวน $TAKO ที่ claim แล้ว",
+    "utility ของ $TAKO ในระบบ (ไม่มีที่เขียนออก)",
+    "จำนวนสแล็บจริงในคลังของเขา",
+    "ใคร own คลังเงินตอนใด"
+  ],
+  "watch": [
+    "liq/MC ratio (กฎ: <10% ห้าม hold ยาว)",
+    "จำนวน pack ที่ปิดแล้วเผย seed ที่ /proof",
+    "การประกาศ Season 2 / points ที่จับ hands ติดต่อได้"
+  ],
+  "needs_recheck": false,
+  "stale_risk": "high",
+  "stale_risk_note": "price/reserve เปลี่ยนรายชั่วโมง; การแสดงผลของ points season เปลี่ยนโดยไม่ประกาศ",
+  "verified_on": "2026-09-30",
+  "sources": [
+    "https://pull.fun",
+    "https://pull.fun/en/terms",
+    "https://pull.fun/en/faq",
+    "https://www.geckoterminal.com/robinhood/pools/0x0db6...",
+    "https://api.dexscreener.com/latest/dex/search?q=TAKO",
+    "https://robinhoodchain.blockscout.com/token/0xd6c0651a0c3f24BBF2794187285a66Da753A1D79",
+    "learning that raw data ถูกลบทุก session — re-curl ก่อน grep ทุกครั้ง"
+  ],
+  "generated_from": "generated by tools/build.py — source of truth is tools/data_*.py, edit there then rebuild"
+}

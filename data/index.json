@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "generated_by": "tools/build.py",
+  "as_of": "2026-09-30",
+  "language": "th",
+  "reading_guide": "AGENTS.md",
+  "fields_per_project": [
+    {
+      "n": "1",
+      "field": "project + X link",
+      "keys": [
+        "name",
+        "aliases",
+        "links.x"
+      ]
+    },
+    {
+      "n": "2",
+      "field": "interest level",
+      "keys": [
+        "score.interest",
+        "field2_interest"
+      ]
+    },
+    {
+      "n": "3",
+      "field": "credibility / trust",
+      "keys": [
+        "score.trust",
+        "trust_evidence[]"
+      ]
+    },
+    {
+      "n": "4",
+      "field": "model / architecture",
+      "keys": [
+        "model",
+        "legal_entity",
+        "chain"
+      ]
+    },
+    {
+      "n": "5",
+      "field": "how to play or invest",
+      "keys": [
+        "how_to_play[]"
+      ]
+    },
+    {
+      "n": "6",
+      "field": "risks",
+      "keys": [
+        "risks[]"
+      ]
+    },
+    {
+      "n": "7",
+      "field": "value for money",
+      "keys": [
+        "value_for_money",
+        "house_edge[]",
+        "cost_of_entry_usd"
+      ]
+    },
+    {
+      "n": "8",
+      "field": "opportunity + returns",
+      "keys": [
+        "opportunity",
+        "returns[]",
+        "max_sane_budget_usd",
+        "capital_rule"
+      ]
+    },
+    {
+      "n": "9",
+      "field": "history + technical/on-chain",
+      "keys": [
+        "history[]",
+        "technical",
+        "verified_on"
+      ]
+    },
+    {
+      "n": "10",
+      "field": "short verdict",
+      "keys": [
+        "verdict_short",
+        "status",
+        "rank"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "renaiss",
+      "name": "Renaiss",
+      "rank": 1,
+      "x": "https://x.com/renaissxyz",
+      "interest": 8.5,
+      "credibility": 8.0,
+      "status": "live (open beta)",
+      "verdict_short": "RWA ตัวจริงที่ตรวจสอบได้บนเชน: การ์ดสแล็บจริง 11,197 ใบเป็น NFT บน BSC, สัญญา verified, อัปเกรดต้องผ่าน Timelock, orderbook มี 4,147 listing, gacha ~2,800 pull/วัน, เงิน USDT ในสัญญา ~$60k — แต่ไม่มีโทเคนให้นักลงทุนซื้อ และคลังยังไม่มีใบรับรองจากบุคคลที่สาม",
+      "cost_of_entry_usd": 28,
+      "max_sane_budget_usd": 1000,
+      "needs_recheck": false,
+      "verified_on": "2026-09-30",
+      "stale_risk": "medium",
+      "json": "data/projects/renaiss.json",
+      "md": "data/projects/renaiss.md"
+    },
+    {
+      "slug": "netnet",
+      "name": "NetNet Capital Management ($NET)",
+      "rank": 2,
+      "x": "https://x.com/netnetcap",
+      "interest": 7.5,
+      "credibility": 7.0,
+      "status": "live",
+      "verdict_short": "Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการนี้: มี prospectus ฉบับจริงบอกสูตร RFV = liquidUSDG + morphoPosition*(1-2%) + 2*sqrt(x*y)*lpShare, มีตาราง contract พร้อม provenance ของแต่ละชิ้น, ผมเรียกทุกตัวผ่าน RPC วันนี้และตัวเลขตรงกันหมด — USDG ใน Treasury $6.69M + $14.92M ใน Steakhouse Morpho vault รวม ~$21.6M รองรับ backing $173.46/NET โดยตรวจสอบได้เอง 100%; แต่ตลาดจ่ายที่ $435.98 = premium ~2.51x NAV และทั้งระบบถือด้วยกุญแจคนเดียว (1-of-1) ซึ่งเอกสารยอมรับเอง",
+      "cost_of_entry_usd": 500,
+      "max_sane_budget_usd": 5000,
+      "needs_recheck": false,
+      "verified_on": "2026-09-30",
+      "stale_risk": "high",
+      "json": "data/projects/netnet.json",
+      "md": "data/projects/netnet.md"
+    },
+    {
+      "slug": "pullfun",
+      "name": "Pull.Fun (+ $TAKO)",
+      "rank": 3,
+      "x": "https://x.com/pulldotfun",
+      "interest": 6.5,
+      "credibility": 4.5,
+      "status": "live (store; โทเคน ~8 วัน)",
+      "verdict_short": "ร้านเปิดpack การ์ดสแล็บจริงที่ serious ด้าน UX — odds เปิดเผย, fair commit-reveal (off-chain), KYC, Stripe, ToS มีเนื้อหา — แต่ระบบทั้งหมดเป็น Web2: JS bundle 3.27 MB (71 chunks) มี 0 contract address สำหรับฝั่งเกม/คลัง, และตัวเขาเองยอมรับว่าไม่พิสูจน์ inventory ได้; ด้านนักลงทุนคือโทเคนเพิ่งเกิด 7 วันบน Robinhood Chain: MC=FDV $503,785, reserve $81,944, vol24 $3,913 (16 buys / 14 sells ใน 24 ชม.)",
+      "cost_of_entry_usd": 10,
+      "max_sane_budget_usd": 500,
+      "needs_recheck": false,
+      "verified_on": "2026-09-30",
+      "stale_risk": "high",
+      "json": "data/projects/pullfun.json",
+      "md": "data/projects/pullfun.md"
+    },
+    {
+      "slug": "trace",
+      "name": "TRACE",
+      "rank": 4,
+      "x": null,
+      "interest": 4.5,
+      "credibility": 4.0,
+      "status": "live collection; ราคาตลาดรองต่ำและสภาพคล่องบาง",
+      "verdict_short": "NFT collection ที่ on-chain มีจริงแต่ proxy ไม่ตรงกับที่เว็บแสดง; floor 0.0108 ETH, volume 7 วัน 59.39 ETH; โปรเจกต์ก่อนของทีม (The Beaks) ราคา -62% => ประวัติการรักษามูลค่าของผู้สร้างเป็นลบ ต้องนับรวมในการให้คะแนน",
+      "cost_of_entry_usd": 50,
+      "max_sane_budget_usd": 200,
+      "needs_recheck": true,
+      "verified_on": "2026-09 (รอบแรก — raw artifacts ไม่ได้ persist)",
+      "stale_risk": "high",
+      "json": "data/projects/trace.json",
+      "md": "data/projects/trace.md"
+    },
+    {
+      "slug": "clickihood",
+      "name": "Clickihood",
+      "rank": 5,
+      "x": null,
+      "interest": 4.0,
+      "credibility": 3.0,
+      "status": "mint เสร็จ; community NFT",
+      "verdict_short": "Free mint 9,999 ที่ metadata ยัง unfrozen และ contract ไม่มีเงิน (0 ETH) — on-chain โปร่งใสดี (holder 711, top-10 29.5%) แต่ rarity ที่จ่ายจริงต่างจากน้ำหนักที่เคลมมาก (ชั้น 1 ออก 3,988 ใบ จากน้ำหนัก 62%) และเคยต้องแก้ตัวเลข holders จาก ~3,600 เป็น 711 => ไม่มีเงินให้เสีย แต่อย่าตีความว่า 'ฟรี = ปลอดภัย'",
+      "cost_of_entry_usd": 0,
+      "max_sane_budget_usd": 50,
+      "needs_recheck": true,
+      "verified_on": "2026-09 (รอบแรก — raw artifacts ไม่ได้ persist)",
+      "stale_risk": "medium",
+      "json": "data/projects/clickihood.json",
+      "md": "data/projects/clickihood.md"
+    },
+    {
+      "slug": "hypest",
+      "name": "HYPEST",
+      "rank": 6,
+      "x": null,
+      "interest": 3.5,
+      "credibility": 3.0,
+      "status": "leaderboard เปิด; prize pool ยังไม่ active",
+      "verdict_short": "ระบบ leaderboard 400 ใบแบบ non-transferable (ตรวจสอบได้) ที่โฆษณา pool $HYPE 690 ล้านเหรียญที่ยัง 'ไม่เปิดใช้งาน' — โครงสร้างคะแนนจริงแต่เงินยังไม่ผูกกับสัญญา => ตอนนี้คือ campaign marketing ไม่ใช่ financial product",
+      "cost_of_entry_usd": 0,
+      "max_sane_budget_usd": 0,
+      "needs_recheck": true,
+      "verified_on": "2026-09 (รอบแรก — ข้อมูลไม่ครบโดยเจตนา)",
+      "stale_risk": "high",
+      "json": "data/projects/hypest.json",
+      "md": "data/projects/hypest.md"
+    },
+    {
+      "slug": "agnt",
+      "name": "Agnt",
+      "rank": 7,
+      "x": null,
+      "interest": 3.0,
+      "credibility": 2.5,
+      "status": "mint 2,530/10,000; claimsOpen=false",
+      "verdict_short": "Mint ที่วิ่งไปเพียง 25.3% ของ supply (2,530/10,000) และความเข้มข้นการถือ 63% ในกลุ่มบน + ปุ่ม claim ยังปิด (claimsOpen=false) => โครงสร้างแบบ 'ของน้อย-คนน้อย-ถอนไม่ได้' ไม่มีอะไรให้สนับสนุนด้วยเงินตอนนี้",
+      "cost_of_entry_usd": 0,
+      "max_sane_budget_usd": 0,
+      "needs_recheck": true,
+      "verified_on": "2026-09 (รอบแรก — ข้อมูลไม่ครบโดยเจตนา)",
+      "stale_risk": "high",
+      "json": "data/projects/agnt.json",
+      "md": "data/projects/agnt.md"
+    },
+    {
+      "slug": "memebitcoin",
+      "name": "MemeBitcoin",
+      "rank": 8,
+      "x": null,
+      "interest": 1.0,
+      "credibility": 0.5,
+      "status": "ไม่แนะนำทุกกรณี",
+      "verdict_short": "Lottery/Math-based scheme ที่ probability ชัยชนะจริงต่ำจนกลายเป็นศูนย์: ที่ผู้เล่น 60,000 คน โอกาสชนะต่อวัน ~3.7e-39 และไม่มีหลักฐานเงินกอง (proof of funds) — 'dead on arithmetic' ไม่ใช่แค่ 'เสี่ยง'",
+      "cost_of_entry_usd": 0,
+      "max_sane_budget_usd": 0,
+      "needs_recheck": true,
+      "verified_on": "2026-09 (รอบแรก)",
+      "stale_risk": "low",
+      "json": "data/projects/memebitcoin.json",
+      "md": "data/projects/memebitcoin.md"
+    }
+  ]
+}

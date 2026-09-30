@@ -1,0 +1,151 @@
+{
+  "slug": "trace",
+  "schema_version": "1.0",
+  "name": "TRACE",
+  "aliases": [
+    "TRACE collection"
+  ],
+  "rank": 4,
+  "status": "live collection; ราคาตลาดรองต่ำและสภาพคล่องบาง",
+  "links": {
+    "x": null,
+    "site": "https://trace.xyz (ต้องยืนยัน URL จริงใหม่)",
+    "docs": null,
+    "related": [
+      "creator: The Beaks (โครงการก่อนหน้า)"
+    ]
+  },
+  "chain": "Ethereum (mainnet) — ตรวจผ่าน public RPC; proxy contract ไม่ตรงกับที่เว็บเคลม (unverified proxy)",
+  "legal_entity": "ไม่ระบุ",
+  "score": {
+    "interest": 4.5,
+    "trust": 4.0
+  },
+  "field2_interest": "4.5/10 — มีของจริงให้ถือแต่ไม่มีกลไก yield/verify เพิ่มเติม; เหมาะเป็น collectible มากกว่า investment",
+  "trust_evidence": [
+    "on-chain: contract address ที่เว็บแสดง ไม่ match กับ proxy ที่ resolve จริงบน mainnet => 'unverified proxy' (red flag ระดับปานกลาง)",
+    "on-chain: SafeProxy ที่เกี่ยวข้องถือ ETH 22.68 => มีเงินกองจริง ไม่ใช่กระเป๋าเปล่า",
+    "market: floor 0.0108 ETH; volume 7 วัน 59.39 ETH (สภาพคล่องมีแต่บางเมื่อคิดเป็น USD)",
+    "history: โปรเจกต์ก่อนของผู้สร้าง (The Beaks) -62% จากจุดสูงสุด"
+  ],
+  "model": "NFT collection + roadmap (ไม่มี token, ไม่มี gacha); มูลค่าขึ้นกับ secondary market และการ execute ของทีม",
+  "how_to_play": [
+    "ตรวจ: resolve proxy บน Etherscan แล้วเทียบกับที่เว็บเคลม (ถ้าไม่ match = ถามทีมก่อนซื้อ)",
+    "ซื้อ: ตลาดรอง (floor 0.0108 ETH) — ไม่ต้อง mint เพราะ mint window ปิด",
+    "ออก: floor ต่ำ + volume 7 วัน 59.39 ETH ครอบคลุมการขาย ~1-2 ใบ/วันต่อสภาพคล่องนั้น => ขายทีละหลายใบต้องลดราคาแรง"
+  ],
+  "risks": [
+    "เอกสารไม่ตรงโค้ด (unverified proxy)",
+    "ประวัติทีม: โครงการก่อน -62%",
+    "floor ต่ำ + volume บาง => exit ล็อก",
+    "ไม่มีข้อมูลทีม/entity/audit ใด ๆ",
+    "ไม่พบกลไก value-accrual สำหรับผู้ถือ"
+  ],
+  "value_for_money": "ที่ floor 0.0108 ETH ราคาค่อนข้างถูกสำหรับ collection ที่มี on-chain activity จริง แต่ volume 59.39 ETH/7วัน แปลว่าขายยาก => 'ถูกแต่สภาพคล่องต่ำ'",
+  "house_edge": [
+    {
+      "component": "no mint-to-market arbitrage",
+      "value": "mint ปิดแล้ว ผู้เข้าใหม่ซื้อที่ตลาดรอง = จ่าย premium/ส่วนลดตามตลาด"
+    },
+    {
+      "component": "proxy mismatch",
+      "value": "ไม่กระทบเงินทันทีแต่กระทบความน่าเชื่อถือของเอกสารโปรเจกต์"
+    }
+  ],
+  "cost_of_entry_usd": 50,
+  "opportunity": " upside มีแค่ 2 ทาง: collection เด้งตาม brand หรือมี airdrop/roadmap ที่ยังไม่ประกาศ — ไม่มีหลักฐานบนเชนที่ชี้ไปทางใดทางหนึ่ง",
+  "returns": [
+    {
+      "budget_usd": 0,
+      "note": "ตรวจ proxy + volume ฟรี",
+      "expected_usd": 0
+    },
+    {
+      "budget_usd": 50,
+      "note": "ซื้อ 1-2 ใบที่ floor (0.0108 ETH ~ $40 ที่ ETH $3,700)",
+      "expected_usd": -5.0
+    },
+    {
+      "budget_usd": 200,
+      "note": "ซื้อช่วง market correction แล้วหวัง collection revival",
+      "expected_usd": -20.0
+    },
+    {
+      "budget_usd": 1000,
+      "note": "ไม่แนะนำ — ไม่มีกลไก drain/burn; ความเสี่ยง = ทีมเลิก",
+      "expected_usd": -200.0
+    },
+    {
+      "budget_usd": 5000,
+      "note": "ไม่ควรเข้า; position ใหญ่กว่า volume รายวัน",
+      "expected_usd": -1200.0
+    },
+    {
+      "budget_usd": 10000,
+      "note": "ไม่มีความเสี่ยงแบบนั้น",
+      "expected_usd": 0
+    }
+  ],
+  "max_sane_budget_usd": 200,
+  "capital_rule": "ซื้อได้เฉพาะฐานะของสะสม ไม่เกิน $200; ห้ามมองเป็น investment จนกว่า proxy ที่เว็บแสดงจะตรงกับ contract จริง",
+  "history": [
+    "ตรวจพบ: proxy ไม่ match, SafeProxy ถือ ETH 22.68, floor 0.0108 ETH, volume 7 วัน 59.39 ETH, ทีม/The Beaks -62%",
+    "note: X handle ของโปรเจกต์ไม่เคยถูกบันทึกไว้ในบันทึกเดิม => ต้องยืนยันใหม่ก่อนอ้างอิง"
+  ],
+  "technical": {
+    "onchain": [
+      {
+        "item": "collection contract",
+        "finding": "เว็บแสดง address ที่ไม่ match กับ proxy ที่ resolve ได้จริง (unverified proxy)"
+      },
+      {
+        "item": "SafeProxy",
+        "finding": "balance 22.68 ETH"
+      },
+      {
+        "item": "floor",
+        "finding": "0.0108 ETH"
+      },
+      {
+        "item": "volume 7d",
+        "finding": "59.39 ETH"
+      }
+    ],
+    "api_endpoints": [
+      "Ethereum public RPC: eth_getCode / eth_getStorageAt / balanceOf",
+      "OpenSea API v1 ถูกถอดออก => ใช้หน้าเว็บ/scan แทน"
+    ],
+    "accounts": {
+      "main": {
+        "handle": null,
+        "note": "ไม่เคยบันทึก ต้อง recheck"
+      }
+    },
+    "market": {
+      "token": "ไม่มีโทเคน"
+    }
+  },
+  "verdict_short": "NFT collection ที่ on-chain มีจริงแต่ proxy ไม่ตรงกับที่เว็บแสดง; floor 0.0108 ETH, volume 7 วัน 59.39 ETH; โปรเจกต์ก่อนของทีม (The Beaks) ราคา -62% => ประวัติการรักษามูลค่าของผู้สร้างเป็นลบ ต้องนับรวมในการให้คะแนน",
+  "unverified": [
+    "X handle เป็นทางการ (ไม่ถูกบันทึกใน round แรก)",
+    "entity ทีม",
+    "ที่มาของ ETH 22.68 ใน SafeProxy ( treasury หรือ escrow )",
+    "จำนวน holder และ concentration",
+    "ว่า proxy mismatch เป็นแค่ doc error หรือตั้งใจ"
+  ],
+  "watch": [
+    "การแก้ไข contract address บนเว็บ (สัญญาณว่าทีมตอบ)",
+    "floor/volume รายวัน",
+    "announcement ของ airdrop หรือ utility ใหม่"
+  ],
+  "needs_recheck": true,
+  "stale_risk": "high",
+  "stale_risk_note": "ราคา floor/volume เปลี่ยนรายวัน; record นี้ incomplete โดยเจตนา (ดู docs/pitfalls.md)",
+  "verified_on": "2026-09 (รอบแรก — raw artifacts ไม่ได้ persist)",
+  "sources": [
+    "Ethereum mainnet RPC (public)",
+    "OpenSea/Blur หน้าเว็บ (scrape ณ วันตรวจ)",
+    "note: raw artifacts ไม่ได้ persist — re-run ก่อน quote"
+  ],
+  "generated_from": "generated by tools/build.py — source of truth is tools/data_*.py, edit there then rebuild"
+}
