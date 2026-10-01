@@ -170,14 +170,26 @@ def md_for(r):
     a("")
     a(r["value_for_money"])
     a("")
-    a("| เครื่อง/องค์ประกอบ | ราคา/งบ (USD) | มูลค่าที่คาดว่าจะได้กลับ | EV เทียบราคา | ขายกลับทันที (net) |")
-    a("|---|---:|---:|---:|---:|")
-    for h in r["house_edge"]:
-        name = h.get("machine") or h.get("component") or "-"
-        price = h.get("price_usd")
-        ev = h.get("ev_usd")
-        a(f"| {name} | {'' if price is None else f'${price:,}'} | {'' if ev is None else f'${ev:,.2f}'} "
-          f"| {h.get('ev_over_price', '—')} | {'—' if h.get('instant_flip_net_pct') is None else str(h['instant_flip_net_pct']) + '%'} |")
+    machines = [h for h in r["house_edge"] if h.get("machine")]
+    factors = [h for h in r["house_edge"] if not h.get("machine")]
+    if machines:
+        a("| เครื่อง | ราคา (USD) | มูลค่าที่คาดว่าจะได้กลับ | EV เทียบราคา | ขายกลับทันที (net) |")
+        a("|---|---:|---:|---:|---:|")
+        for h in machines:
+            price = h.get("price_usd")
+            ev = h.get("ev_usd")
+            flip = h.get("instant_flip_net_pct")
+            flips = "—" if flip is None else (str(flip) if "%" in str(flip) else str(flip) + "%")
+            a(f"| {h.get('machine')} | {'' if price is None else f'${price:,}'} | {'' if ev is None else f'${ev:,.2f}'} "
+              f"| {h.get('ev_over_price', '—')} | {flips} |")
+    if factors:
+        a("")
+        a("**ค่าใช้จ่าย/ข้อกำหนดอื่น (ไม่ใช่ราคาเครื่องเดียว):**")
+        a("")
+        a("| องค์ประกอบ | ค่า / ผลกระทบ |")
+        a("|---|---|")
+        for h in factors:
+            a(f"| {h.get('component', '-')} | {h.get('value', '')} |")
     a("")
     a(f"ต้นทุนเข้าขั้นต่ำที่ทดสอบได้: ${r['cost_of_entry_usd']:,}")
     a("")
@@ -185,14 +197,14 @@ def md_for(r):
     a("")
     a(r["opportunity"])
     a("")
-    a("| งบ (USD) | สิ่งที่ทำ | ผลลัพธ์คาดการณ์ (USD) | หมายเหตุ |")
-    a("|---:|---|---:|---|")
+    a("| งบ (USD) | รายละเอียด | ผลลัพธ์คาดการณ์ (USD) |")
+    a("|---:|---|---:|")
     for x in r["returns"]:
-        note = x.get("note", "")
-        what = note.split(" — ")[0][:60]
+        what, note = x.get("what", ""), x.get("note", "")
+        text = what if not note else (note if not what or what == note else f"{what} — {note}")
         exp = x.get("expected_usd")
         exp = "—" if exp is None else f"{exp:+,.0f}"
-        a(f"| {x['budget_usd']:,} | {what} | {exp} | {note} |")
+        a(f"| {x['budget_usd']:,} | {text} | {exp} |")
     a("")
     a(f"**เพดานงบที่สมเหตุสมผล: ${r['max_sane_budget_usd']:,}** — {r['capital_rule']}")
     a("")
@@ -508,13 +520,13 @@ def schema_json():
       "value_for_money": {"type": "string"},
       "house_edge": {"type": "array", "items": {"type": "object", "properties": {
           "machine": {"type": "string"}, "component": {"type": "string"}, "price_usd": {"type": "number"},
-          "ev_usd": {"type": "number"}, "ev_over_price": {"type": "string"}, "instant_flip_net_pct": {"type": "number"},
+          "ev_usd": {"type": "number"}, "ev_over_price": {"type": "string"}, "instant_flip_net_pct": {"type": "number", "description": "net % เมื่อขายกลับทันทีภายใน 1 ชม. (worst-case window แรก)"},
           "value": {"type": "string"}, "note": {"type": "string"}, "tier_buyback_floor_usd": {"type": "array"}},
           "additionalProperties": True}},
       "cost_of_entry_usd": {"type": "number", "minimum": 0},
       "opportunity": {"type": "string"},
       "returns": {"type": "array", "minItems": 4, "items": {"type": "object", "required": ["budget_usd"],
-          "properties": {"budget_usd": {"type": "number"}, "note": {"type": "string"}, "expected_usd": {"type": "number"}},
+          "properties": {"budget_usd": {"type": "number"}, "what": {"type": "string"}, "note": {"type": "string"}, "expected_usd": {"type": "number"}},
           "additionalProperties": True}},
       "max_sane_budget_usd": {"type": "number", "minimum": 0},
       "capital_rule": {"type": "string"},

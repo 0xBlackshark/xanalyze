@@ -28,9 +28,9 @@
 
 - **1. Renaiss** (interest 8.5/10, credibility 8.0/10) — live (open beta): RWA ตัวจริงที่ตรวจสอบได้บนเชน: การ์ดสแล็บจริง 11,197 ใบเป็น NFT บน BSC, สัญญา verified, อัปเกรดต้องผ่าน Timelock, orderbook มี 4,147 listing, gacha ~2
   json: `data/projects/renaiss.json` · md: `data/projects/renaiss.md` · verified_on: 2026-09-30 · needs_recheck: false
-- **2. NetNet Capital Management ($NET)** (interest 7.5/10, credibility 7.0/10) — live: Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการนี้: มี prospectus ฉบับจริงบอกสูตร RFV = liquidUSDG + morphoPosition*(
+- **2. NetNet Capital Management ($NET)** (interest 7.5/10, credibility 7.0/10) — live: Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการแนวนี้: มี prospectus ฉบับจริงบอกสูตร RFV = liquidUSDG + morphoPositio
   json: `data/projects/netnet.json` · md: `data/projects/netnet.md` · verified_on: 2026-09-30 · needs_recheck: false
-- **3. Pull.Fun (+ $TAKO)** (interest 6.5/10, credibility 4.5/10) — live (store; โทเคน ~8 วัน): ร้านเปิดpack การ์ดสแล็บจริงที่ serious ด้าน UX — odds เปิดเผย, fair commit-reveal (off-chain), KYC, Stripe, ToS มีเนื้อหา — แต่ระบบทั้งหมดเป็น Web2: J
+- **3. Pull.Fun (+ $TAKO)** (interest 6.5/10, credibility 4.5/10) — live (store; โทเคน ~8 วัน): ร้านเปิด pack การ์ดสแล็บจริงที่จริงจังด้าน UX — odds เปิดเผย, fair commit-reveal (off-chain), KYC, Stripe, ToS มีเนื้อหา — แต่ระบบทั้งหมดเป็น Web2: JS
   json: `data/projects/pullfun.json` · md: `data/projects/pullfun.md` · verified_on: 2026-09-30 · needs_recheck: false
 - **4. TRACE** (interest 4.5/10, credibility 4.0/10) — live collection; ราคาตลาดรองต่ำและสภาพคล่องบาง: NFT collection ที่ on-chain มีจริงแต่ proxy ไม่ตรงกับที่เว็บแสดง; floor 0.0108 ETH, volume 7 วัน 59.39 ETH; โปรเจกต์ก่อนของทีม (The Beaks) ราคา -62% =
   json: `data/projects/trace.json` · md: `data/projects/trace.md` · verified_on: 2026-09 (รอบแรก — raw artifacts ไม่ได้ persist) · needs_recheck: true
@@ -48,7 +48,7 @@
 | งบ | Renaiss | NetNet Capital Management ($NET) | Pull.Fun (+ $TAKO) | TRACE | Clickihood | HYPEST | Agnt | MemeBitcoin |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:
 | $0 | +0 | +0 | -1 | +0 | +0 | +0 | +0 | +0 |
-| $100 | -6 | -10 | -12 | -5 | -10 | -100 | -40 | -100 |
+| $100 | -6 | -10 | -11 | -5 | -10 | -100 | -40 | -100 |
 | $500 | -18 | -49 | -53 | -20 | -40 | +0 | -200 | -500 |
 | $1,000 | -60 | -98 | -106 | -200 | -300 | +0 | -400 | -1,000 |
 | $5,000 | -60 | -488 | -530 | -1,200 | +0 | +0 | -2,000 | -5,000 |

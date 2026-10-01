@@ -19,14 +19,14 @@ META = {
      "อีกเรื่อง: float มีแค่ 3.9% ของ supply (MC $2.1M บน FDV $53.6M) ทำให้ราคาเป็นอาณาเขตของคนน้อยเดินง่าย"),
    budget_min_usd=500, budget_entry_usd=500, budget_max_sane_usd=5000,
    capital_rule=("เข้าเฉพาะเมื่อ premium < 1.1 (1 NET ≈ 1 USDG working บน NAV ไม่ใช่ market); ที่ ~2.51× คุณซื้อ ~$173.46 ของ NAV ด้วย $435.98 + tax ทีละสอง "
-     "=> ถ้าจะเข้าตอนนี้ให้มองว่าเป็น yield position ต้องถือ 8-16 วันก่อน rebase มี权重; split order ทุกครั้งเมื่อ > $5k และตั้ง stop อย่างเข้มงวดเพราะ float มีแค่ $2.1M")),
+     "=> ถ้าจะเข้าตอนนี้ให้มองว่าเป็น yield position ต้องถือ 8-16 วันกว่า rebase จะมีผล; split order ทุกครั้งเมื่อ > $5k และตั้ง stop อย่างเข้มงวดเพราะ float มีแค่ $2.1M")),
  "pullfun": dict(
    verified_on="2026-09-30",
    value_for_money=("เหมาะในฐานะที่เล่นบันเทิงราคาถูก — odds เปิดเผย, sell-back 90/80%, fair-verify off-chain; "
      "แต่ไม่มี on-chain escrow เรื่องในคลังและ $TAKO (Robinhood) เป็นลอตเตอรี่ 7 วัน: reserve $81,944 ต่อ MC $503,785 (16.3%), ลง 88% จากไฮวันแรก"),
    budget_min_usd=10, budget_entry_usd=100, budget_max_sane_usd=500,
-   capital_rule=("เป็นสถานที่เล่นบันเทิงได้ ($10-500) — ห้าม carry position เกินอย่างละเอียด คุณไม่มีทางฟ้องเขาถ้าของหาย; "
-     ">= $TAKO: จำกัด $600-2,000 ต่อ position (reserve ของพูลคือ $81.9k เฉพาะ) และ exit ทันทีเมื่อ reserve/MC < 10%")),
+   capital_rule=("เพดาน $500 ครอบ 'เครื่องร้าน/pull + consign' ทั้งหมดรวมกัน — ห้ามฝากเกินนี้เพราะ escrow คลังตรวจไม่ได้และไม่มี recourse ต่อนิติบุคคลนิรนาม; "
+     "$TAKO เป็น instrument อื่น (token 2/10): default แนะนำข้าม — ถ้าบังคับจะเล่น จำกัด ≤$500 ต่อ position (~0.6% ของ reserve $81.9k) และ exit ทันทีเมื่อ reserve/MC < 10%")),
  "trace": dict(
    verified_on="2026-09 (รอบแรก — raw artifacts ไม่ได้ persist)",
    value_for_money="ที่ floor 0.0108 ETH ราคาค่อนข้างถูกสำหรับ collection ที่มี on-chain activity จริง แต่ volume 59.39 ETH/7วัน แปลว่าขายยาก => 'ถูกแต่สภาพคล่องต่ำ'",

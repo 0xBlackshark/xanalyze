@@ -4,7 +4,7 @@
 
 ## คำตอบสั้น (field 10)
 
-Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการนี้: มี prospectus ฉบับจริงบอกสูตร RFV = liquidUSDG + morphoPosition*(1-2%) + 2*sqrt(x*y)*lpShare, มีตาราง contract พร้อม provenance ของแต่ละชิ้น, ผมเรียกทุกตัวผ่าน RPC วันนี้และตัวเลขตรงกันหมด — USDG ใน Treasury $6.69M + $14.92M ใน Steakhouse Morpho vault รวม ~$21.6M รองรับ backing $173.46/NET โดยตรวจสอบได้เอง 100%; แต่ตลาดจ่ายที่ $435.98 = premium ~2.51x NAV และทั้งระบบถือด้วยกุญแจคนเดียว (1-of-1) ซึ่งเอกสารยอมรับเอง
+Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการแนวนี้: มี prospectus ฉบับจริงบอกสูตร RFV = liquidUSDG + morphoPosition*(1-2%) + 2*sqrt(x*y)*lpShare, มีตาราง contract พร้อม provenance ของแต่ละ deployment — เรียกทุกตัวจริงผ่าน RPC และตัวเลขตรงกันหมด (USDG ใน Treasury $6.69M + $14.92M ใน Steakhouse Morpho vault รวม ~$21.6M รองรับ backing $173.46/NET ซึ่งนำไปตรวจซ้ำเองได้ทั้งหมด); แต่ราคาตลาด $435.98 = premium ~2.51x NAV และทั้งระบบถูกคุมด้วยกุญแจคนเดียว (team multisig 1-of-1) ซึ่งเอกสารเองยอมรับ
 
 | อันดับ | interest | credibility | สถานะ | ต้นทุนเข้าต่ำสุด | งบสูงสุดที่สมเหตุสมผล |
 |---:|---:|---:|---|---:|---:|
@@ -22,15 +22,15 @@ Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โ�
 
 ## 2) ระดับความน่าสนใจ — 7.5/10
 
-7.5/10 — เป็นโปรเจกต์เดียวในชุดนี้ที่เอกสาร+contract ตรงกันระดับที่ผม re-derive ทุกเลขได้โดยตรง; หักคะแนนที่ float เล็กมาก (MC $2.10M บน FDV $53.6M, 96.1% ไม่หมุน), premium 2.51x และ 1-of-1 custody
+7.5/10 — โปรเจกต์เดียวในชุดนี้ที่เอกสาร+contract ตรงกันระดับที่ re-derive ทุกเลขได้ด้วยมือ; หักคะแนนที่ float เล็กมาก (MC $2.10M บน FDV $53.6M = 96.1% ไม่หมุน), premium ~2.51x NAV และ 1-of-1 custody
 
 ## 3) ความน่าเชื่อถือ — 7.0/10
 
 - ✅ on-chain (RPC rpc.mainnet.chain.robinhood.com 2026-09-30): NET.name()='NetNet', NET.symbol()='NET', decimals=9, totalSupply=123,035.12 NET, NET.treasury()=0x04822EA321A0DEE6F40656172F29312104855d66
-- ✅ on-chain: Treasury ถือ USDG สด $6,692,428.19; Treasury ถือ share ของ Steakhouse Morpho USDG vault (0xBeEff033F34C046626B8D0A041844C5d1A5409dd) convertToAssets = $14,923,520.98 => รวม ~$21,615,949 เทียบกับ rfv() ~$21,342,199 ผิดกัน < 1.3%
-- ✅ on-chain: Treasury.backingPerToken() = 173.4643 (18dec scaled) => NAV ~$173.46 และ ราคาตลาด CoinGecko $435.98 => premium ~2.51x
+- ✅ on-chain: Treasury ถือ USDG สด $6,692,428.19; Treasury ถือ share ของ Steakhouse Morpho USDG vault (0xBeEff033F34C046626B8D0A041844C5d1A5409dd) convertToAssets = $14,923,520.98 => รวม ~$21,615,949 เทียบกับ rfv() ~$21,342,199 ต่างกัน < 1.3%
+- ✅ on-chain: Treasury.backingPerToken() = 173.4643 (18dec scaled) => NAV ~$173.46 และราคาตลาด CoinGecko $435.98 => premium ~2.51x
 - ✅ on-chain: team multisig 0x3Bb7A23316f82C0e984fA2E784846d8928a35f42 -> getThreshold()=1 และ getOwners()=[กระเป๋าเดียว 0xe7e867518c5B3d929CA63622f314FF9Dc60E96f6] => 1-of-1 ตรงที่ prospectus ยอมรับเองว่าต่ำกว่า 2-of-3 ของสเปกตัวเอง
-- ✅ docs: มี prospectus page ครบทุก desk (Real World Bonds, Loopback, Predict, WinNET, CLIMB INC, Superstore, COINflip, SPACEX INVADERS, MSFT FLIGHT SIMULATOR, TURBO, TURBO BLACKJACK, THE BOARD MEETING, BASKETS, THE BOOK, NET ADVANCE, THE BUTTON) และหน้า official-channels ที่ชัดว่า 'IF A CHANNEL IS NOT ON THIS PAGE, IT IS NOT OURS'
+- ✅ docs: มี prospectus page ครบทุก desk (Real World Bonds, Loopback, Predict, WinNET, CLIMB INC, Superstore, COINflip, SPACEX INVADERS, MSFT FLIGHT SIMULATOR, TURBO, TURBO BLACKJACK, THE BOARD MEETING, BASKETS, THE BOOK, NET ADVANCE, THE BUTTON) และหน้า official-channels ระบุชัดว่า 'IF A CHANNEL IS NOT ON THIS PAGE, IT IS NOT OURS'
 - ✅ app bundle (app.netnet.capital/assets/index-C854Y_6l.js, 1.26 MB): มี contract map พร้อมข้อความ 'HUMAN-VERIFIED' + tx hash + block ของแต่ละ deployment (เช่น advanceDesk: create tx 0xaebf8d3c..., block 72453275)
 - ✅ market: CoinGecko id=netnet: price $435.98, MC $2,103,280, FDV $53,599,297, circulating 4,824.28 (3.9%), total supply 122,913.62; ATH $1,887.55 (2026-08-29), ATL $15.83 (2026-07-27), 24h +2.3%, 7d -37.8%, 30d -62.7%
 - ✅ correction: บันทึกรอบก่อนระบุ chain=Base, site=netnet.fi, contract=0x552eC46bEBb51734Bb67d56DdB1a5CB95224Gc96 (มี 'G' ไม่ใช่ hex) — แก้แล้วดังนี้
@@ -43,75 +43,79 @@ Reserve fund + desk network (mirroring OlympusDAO v1): Core = NET token, rebasin
 
 1. อ่านฟรีก่อนจ่าย: (a) docs.netnet.capital/treasury (สูตร RFV/NAV + Morpho cap) (b) เรียก on-chain (abi links ใน docs/evidence.md) (c) เช็ก official-channels ให้ตรงเว็บ 100% (d) เช็ก market cap vs FDV คือ 3.9% float
 1. เข้า: bridge ผ่าน Robinhood Chain portal → ซื้อ NET หรือผ่าน play/turbo desk UI — แต่เอกสารเขาเองบอกว่าเข้าที่ใกล้ NAV จะ preserve capital มากกว่า premium
-1. ออก: อย่าเข้าเมื่อ premium สูงอยู่แล้วเพื่อออกเร็ว (tax 5%+5% + premium erosion กินเงินก่อนดอก)
+1. ออก: อย่าเข้าเมื่อ premium สูงอยู่แล้วเพื่อหวังออกเร็ว (tax 5%+5% + premium erosion กินเงินก่อนดอก)
 
 ## 6) ความเสี่ยง
 
-- ⚠️ **1-of-1 custody**: ทั้ง team multisig และการตัดสินใจส่วนใหญ่ถูก view ด้วย outไซด์ key คนเดียว — breach เดียว = ทั้งระบบ
-- ⚠️ market float เล็ก: MC $2.1M vs FDV $53.6M => 96.1% ไม่หมุน เล็กมากต่อ big money claim ของ volume ที่ CoinGecko แสดง
-- ⚠️ premium ~2.51x NAV: ถ้า NAV ไม่โตคุณไม่เหลิดlogistic ที่คุณเสียได้ทั้งหมด
-- ⚠️ swap tax 5%+5%: ไม่ใช่กลไก swap ฟรี — รaport
-- ⚠️ 18+ desks: แถบการพนัน + นักการเงิน (สิทธิเต็ม) มีความเสี่ยงเชิตชัดมากตามประเทศ
-- ⚠️ ไม่มี audit ฉบับ opensouvenir
-- ⚠️ anti-impersonation evidence 'fake channels ยิงใน' เขาเองจึงบอกระบบ less is more แล้ว
+- ⚠️ **1-of-1 custody**: team multisig = signer เดียว — breach ครั้งเดียว = ทั้งระบบ (prospectus ยอมรับเอง)
+- ⚠️ market float เล็ก: MC $2.1M vs FDV $53.6M => 96.1% ไม่หมุน — volume/on-paper มากกว่าขนาดซื้อขายจริง
+- ⚠️ premium ~2.51x NAV: ถ้า NAV ไม่โต premium นี้คือต้นทุนที่คุณเสียทันทีทั้งหมด
+- ⚠️ swap tax 5%+5% (~9.75% round trip): ทำให้การเข้า-ออกโดยไม่มี yield ทำงาน ติดลบตั้งแต่ต้น
+- ⚠️ 18+ desks: ห้องการพนันหลายตัว — เสี่ยงถูกจำกัด/ผิดกฎหมายตามประเทศของผู้ใช้
+- ⚠️ ไม่มี audit ฉบับสาธารณะ (bundle มีแค่ label 'HUMAN-VERIFIED' จากทีมเอง)
+- ⚠️ ช่องทางการ communication จำกัดโดยเจตนา: official-channels เท่านั้น — นอกลิสต์นั้นเขาประกาศเองว่าเป็น fake ทั้งหมด
 
 ## 7) ความคุ้มค่า (เงินที่จ่าย vs สิ่งที่ได้)
 
 คุ้มสำหรับคนที่อยากมี NAV instrument ที่ verify กันเองได้ครบ — prospectus+contract ตรงกัน 100% ที่เราตรวจวันนี้; แต่ไม่คุ้มเชิงตลาดตอนนี้: คุณจ่าย $435.98 เพื่อได้ backing $173.46 (premium ~2.51×) และ round trip swap tax 5%+5% ≈ 9.75% ก่อนเห็น yield; อีกเรื่อง: float มีแค่ 3.9% ของ supply (MC $2.1M บน FDV $53.6M) ทำให้ราคาเป็นอาณาเขตของคนน้อยเดินง่าย
 
-| เครื่อง/องค์ประกอบ | ราคา/งบ (USD) | มูลค่าที่คาดว่าจะได้กลับ | EV เทียบราคา | ขายกลับทันที (net) |
-|---|---:|---:|---:|---:|
-| swap tax buy+sell (pool mapped) |  |  | — | — |
-| premium to NAV |  |  | — | — |
-| 1-of-1 custody |  |  | — | — |
-| float tiny |  |  | — | — |
-| 18+ arcade |  |  | — | — |
-| no audit |  |  | — | — |
+
+**ค่าใช้จ่าย/ข้อกำหนดอื่น (ไม่ใช่ราคาเครื่องเดียว):**
+
+| องค์ประกอบ | ค่า / ผลกระทบ |
+|---|---|
+| swap tax buy+sell (pool mapped) | 5% + 5% => round trip ~9.75% (ก่อน slippage) |
+| premium to NAV | 2.51x (ซื้อ $435.98 เพื่อได้ backing $173.46) — ถ้า NAV ไม่โต premium จะดูดกำไรทั้งหมด |
+| 1-of-1 custody | กุญแจคนเดียวทั้งระบบ — prospectus ยอมรับเองว่า 'below the 2-of-3 the fund's own specification recommends' |
+| float tiny | 4,824 of 122,914 NET circulating => order เล็กก็ขยับราคา |
+| 18+ arcade | หลาย desk เป็น gambling — เสี่ยงถูกจำกัดตามประเทศของผู้ใช้ |
+| no public audit | bundle มี label 'HUMAN-VERIFIED' provenance แต่ไม่มี auditor ภายนอกที่เปิดเผยชื่อ |
 
 ต้นทุนเข้าขั้นต่ำที่ทดสอบได้: $500
 
 ## 8) โอกาส + ผลตอบแทนคาดการณ์ตามงบ
 
-อย่างน้อยโครงสร้างนี้เข้าใจได้: เมื่อ premium เข้าใกล้ 1.0 ให้ซื้อ 1 NAV ได้ 1 USDG; เมื่อ NAV โต (จาก desk revenue + treasury yield) => เงินในโล่งเร็ว; และยังมี yield จาก staking + liquidity desks ที่เปิดแล้วบางส่วน ถ้าคุณเลือกที่ NAV ไม่ premium
+อย่างน้อยโครงสร้างนี้เข้าใจได้: เมื่อ premium ใกล้ 1.0 คุณซื้อ NAV ในราคาใกล้ 1 NET ต่อ 1 USDG; และถ้า NAV โต (จาก desk revenue + treasury yield) ตัวเลขรองรับขึ้นตามจริง — ตรวจได้ผ่าน RPC; โอกาสจริงคือ (1) รอ premium < 1.1 แล้วเข้า (2) yield จาก staking/liquidity desks ที่เปิดแล้วบางส่วน ถ้าเลือกเข้าตำแหน่งที่ไม่ premium
 
-| งบ (USD) | สิ่งที่ทำ | ผลลัพธ์คาดการณ์ (USD) | หมายเหตุ |
-|---:|---|---:|---|
-| 0 | อ่าน/verify ทุกอย่างได้ฟรีทั้ง docs + RPC | +0 | อ่าน/verify ทุกอย่างได้ฟรีทั้ง docs + RPC |
-| 100 | เสีย ~9.75% จาก tax ถ้าเข้าแล้วออกเร็ว โดยไม่พิจารณา yield | -10 | เสีย ~9.75% จาก tax ถ้าเข้าแล้วออกเร็ว โดยไม่พิจารณา yield |
-| 500 | เริ่มเห็น rebase มีผล แต่ premium ยังกิน; ต้องถือ 8-16 วันเพ | -49 | เริ่มเห็น rebase มีผล แต่ premium ยังกิน; ต้องถือ 8-16 วันเพื่อ index มีศัพท์ |
-| 1,000 | คุณเริ่มเป็นส่วนหนึ่งของ float 4,824 NET: ราคาเด้งเร็ว | -98 | คุณเริ่มเป็นส่วนหนึ่งของ float 4,824 NET: ราคาเด้งเร็ว |
-| 5,000 | ออกไม่สะดวก;, slippage เพิ่ม + เพิ่ม brother pool selection | -488 | ออกไม่สะดวก;, slippage เพิ่ม + เพิ่ม brother pool selection |
-| 10,000 | ไม่ควรเข้า | -975 | ไม่ควรเข้า — ราคาปิด dominate โดย float น้อย คุณจะกลายเป็น size ของทั้งตลาด |
+| งบ (USD) | รายละเอียด | ผลลัพธ์คาดการณ์ (USD) |
+|---:|---|---:|
+| 0 | อ่าน/verify ฟรี — ตรวจทุกอย่างได้ฟรีทั้ง docs + RPC ไม่ต้องใส่เงิน | +0 |
+| 100 | เข้า-ออกเร็วทดสอบระบบ — เสีย ~9.75% จาก tax 5%+5% โดยไม่พิจารณา yield | -10 |
+| 500 | ถือ 8-16 วัน — rebase เริ่มมีผลแต่ premium ยังกินอยู่; ต้องถือจน index ชดเชย tax + premium | -49 |
+| 1,000 | position เล็กเมื่อเทียบ float — เริ่มเป็นสัดส่วนของ float 4,824 NET — ราคาเด้งเร็วทั้งซื้อและขาย | -98 |
+| 5,000 | ไม่แนะนำ — ออกยาก: slippage เพิ่มชัดเพราะพูลและ float เล็ก | -488 |
+| 10,000 | ห้ามเข้างบนี้ — float น้อยมาก — คุณจะกลายเป็น size ของทั้งตลาด | -975 |
 
-**เพดานงบที่สมเหตุสมผล: $5,000** — เข้าเฉพาะเมื่อ premium < 1.1 (1 NET ≈ 1 USDG working บน NAV ไม่ใช่ market); ที่ ~2.51× คุณซื้อ ~$173.46 ของ NAV ด้วย $435.98 + tax ทีละสอง => ถ้าจะเข้าตอนนี้ให้มองว่าเป็น yield position ต้องถือ 8-16 วันก่อน rebase มี权重; split order ทุกครั้งเมื่อ > $5k และตั้ง stop อย่างเข้มงวดเพราะ float มีแค่ $2.1M
+**เพดานงบที่สมเหตุสมผล: $5,000** — เข้าเฉพาะเมื่อ premium < 1.1 (1 NET ≈ 1 USDG working บน NAV ไม่ใช่ market); ที่ ~2.51× คุณซื้อ ~$173.46 ของ NAV ด้วย $435.98 + tax ทีละสอง => ถ้าจะเข้าตอนนี้ให้มองว่าเป็น yield position ต้องถือ 8-16 วันกว่า rebase จะมีผล; split order ทุกครั้งเมื่อ > $5k และตั้ง stop อย่างเข้มงวดเพราะ float มีแค่ $2.1M
 
 ## 9) ประวัติ + หลักฐานทางเทคนิค/on-chain
 
 ### ไทม์ไลน์
-- 2026-04-07 เปิด X @netnetcap ตามบันทึกทางการ
+- 2026-04-07 เปิด X @netnetcap ตามบันทึกที่รวบรวม
 - 2026-07-14 bundle log: deploy ที่ block 9337409
-- 2026-07-23 bundle note: VERSION()=1.4.1 เลิกที่นี
+- 2026-07-23 bundle: VERSION()=1.4.1
 - 2026-07-27 ATL $15.83
 - 2026-08-29 ATH $1,887.55
 - 2026-09-09 attestation: commit ca83c8b4 ณ block 72453275 (Advance Desk)
 - 2026-09-23 bundle note: 'shifted by the architect at the human's instruction'
 - 2026-09-25 deploy advanceDesk: create tx 0xaebf8d3c8dad4a79ef044091243bf4b6ae01e621bf6f1f8a120f9470370c9dbe (provenance ใน bundle)
-- 2026-09-30: correction (เราอยู่ที่นี่): แก้ chain ญาดมาก Base→Robinhood; แก้ NET address ร้าย (มี hex 'G' ร้อน) เป็น 0xca9c…, เพิ่ม links เคยンphpน, อธิบาย locking
+- 2026-09-30 correction (เราอยู่ที่นี่): แก้ chain Base→Robinhood; แก้ NET address ที่ผิด (มี 'G' ซึ่งไม่ใช่อักขระ hex) เป็น 0xca9c…; re-verify ทุกตัวผ่าน RPC
+- 2026-10-01 post-audit: audit ภายนอกทักข้อความเพี้ยนในไฟล์นี้ — แก้สะอาดแล้วเท่าที่ตรวจใจกับหลักฐานเดิมได้
 
 ### สิ่งที่วัดได้จริง
 - **NET token** `0xca9c78dd337a67f6e0077f65f5e9218719d30edf` — name NetNet | symbol NET | decimals 9 | totalSupply 123,035.12 (เรียกจริง) | treasury() → 0x04822E…
 - **Treasury** `0x04822Ea321A0DEE6F40656172F29312104855d66` — USDG.balanceOf=$6,692,428.19 | rfv()≈$21.34M (18dec) | backingPerToken()=173.4643 (18dec)
 - **Morpho Steakhouse USDG vault** `0xBeEff033F34C046626B8D0A041844C5d1A5409dd` — treasury.valueOf → convertToAssets = $14,923,520.98 (idle USDG เก็บอยู่ที่นี่ตาม 70/30 cap)
 - **team multisig (1-of-1)** `0x3Bb7A23316f82C0e984fA2E784846d8928a35f42` — getThreshold()=1, getOwners()=[0xe7e86751… ตัวเดียว] — ตรง prospectus
-- **USDG stablecoin** `0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168` — decimals 6; totalSupply ≈ $687M (reserve asset เพียวต์)
-- **Origami hOHM (ไม่ใช่ NET)** `0x76Cf788606F3d968B93B8A243D0e185C974EE407` — name 'Origami hOHM' symbol hOHM decimals 18 — ไม่ใช่ NET (ไม่ตีความร่วมกัน)
-- **advanceDesk** `0xDe9df88ABA59b644D4d7f6305e52aB982A3cFCac` — เอกสาร/version ของ bundled contract map พิสูจน์ legitimacy ที่都有 block 72453275
-- **Cooperativeด้าน auditor side** — Bundle มี label 'HUMAN-VERIFIED' + ข้อความเฉพาะ canonical block source
+- **USDG stablecoin** `0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168` — decimals 6; totalSupply ≈ $687M — reserve asset หลักของระบบ
+- **Origami hOHM (ไม่ใช่ NET)** `0x76Cf788606F3d968B93B8A243D0e185C974EE407` — name 'Origami hOHM' symbol hOHM decimals 18 — ระวังอย่าไปตีความรวมว่าเป็น NET
+- **advanceDesk** `0xDe9df88ABA59b644D4d7f6305e52aB982A3cFCac` — provenance ใน bundle: deploy block 72453275 + create tx hash จริง — ใช้ยืนยัน legitimacy ของ desk นี้ได้
+- **auditor** — ไม่มี — bundle ใช้ label 'HUMAN-VERIFIED' จากทีมเองเท่านั้น ไม่มีชื่อบริษัท audit ใน docs
 
 ### จุดที่เรียกตรวจสอบได้
 - `https://docs.netnet.capital/treasury (RFV/NAV formula)`
 - `https://app.netnet.capital (Shareholder services)`
-- `https://netnetdesk-proxy-production.up.railway.app (backend—/health public)`
+- `https://netnetdesk-proxy-production.up.railway.app (backend — /health public)`
 - `https://robinhoodchain.blockscout.com/token/0xca9c78dd337a67f6e0077f65f5e9218719d30edf`
 
 ### บัญชี/สถานะตลาด
@@ -138,18 +142,18 @@ Reserve fund + desk network (mirroring OlympusDAO v1): Core = NET token, rebasin
 ## สิ่งที่ยังตรวจสอบไม่ได้ (ห้ามอ่านข้าม)
 
 - ❓ ชื่อบริษัท/registration ของ NetNet Capital Management
-- ❓ ตาราง lock ของ 96.1% supply ที่ไม่หมุน (ทำไม FDV ไม่ตก?) — เขาไม่ publish
-- ❓ audit ใด ๆ ที่เห็นใน public
+- ❓ ตาราง lock/vesting ของ supply 96.1% ที่ไม่หมุน (ทำไม FDV ไม่ตก?) — เขาไม่ publish
+- ❓ audit ใด ๆ ที่เปิดเผยสาธารณะ
 - ❓ holder concentration (Blockscout api/v2 ผ่าน Cloudflare)
-- ❓ ที่ตั้ง custodian ของ RWA sleeve นอก USDG — prospectus อ้างผ่านแต่ไม่มีภาพแสดงที่ที่นั่น
+- ❓ ที่ตั้ง custodian ของ RWA sleeve นอก USDG — prospectus อ้างถึงแต่ไม่มีหลักฐานแสดงบนหน้าเว็บ
 
 ## ต้องเฝ้าต่อ
 
 - 👀 premium < 1.1 (เข้า)
-- 👀 การปรับเปลี่ยน Morpho cap (60/40)
+- 👀 การปรับเปลี่ยน Morpho cap (เช่น 60/40)
 - 👀 การเปลี่ยน 1-of-1 เป็น 2-of-3
-- 👀 announcement ของ audit
-- 👀 ปัญหา fake channels บน Solana/ใดๆ
+- 👀 การประกาศ audit
+- 👀 ช่องทาง fake บนเชนอื่น
 
 ## แหล่งอ้างอิง
 

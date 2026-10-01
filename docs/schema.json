@@ -270,7 +270,8 @@
             "type": "string"
           },
           "instant_flip_net_pct": {
-            "type": "number"
+            "type": "number",
+            "description": "net % เมื่อขายกลับทันทีภายใน 1 ชม. (worst-case window แรก)"
           },
           "value": {
             "type": "string"
@@ -303,6 +304,9 @@
         "properties": {
           "budget_usd": {
             "type": "number"
+          },
+          "what": {
+            "type": "string"
           },
           "note": {
             "type": "string"

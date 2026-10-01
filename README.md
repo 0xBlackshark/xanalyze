@@ -11,8 +11,8 @@
 | # | โปรเจกต์ | interest | credibility | สถานะ | เข้าได้ตั้งแต่ | เพดานงบ | หนึ่งบรรทัด |
 |--:|---|--:|--:|---|--:|--:|---|
 | 1 | [Renaiss](data/projects/renaiss.md) | 8.5 | 8.0 | live (open beta) | $28 | $1,000 | RWA ตัวจริงที่ตรวจสอบได้บนเชน: การ์ดสแล็บจริง 11,197 ใบเป็น NFT บน BSC, สัญญา verified, อัปเกรดต้องผ่าน Timelock, ord… |
-| 2 | [NetNet Capital Management ($NET)](data/projects/netnet.md) | 7.5 | 7.0 | live | $500 | $5,000 | Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการนี้: มี prospectus ฉบับจริงบอกสูตร RF… |
-| 3 | [Pull.Fun (+ $TAKO)](data/projects/pullfun.md) | 6.5 | 4.5 | live (store | $10 | $500 | ร้านเปิดpack การ์ดสแล็บจริงที่ serious ด้าน UX — odds เปิดเผย, fair commit-reveal (off-chain), KYC, Stripe, ToS มีเนื… |
+| 2 | [NetNet Capital Management ($NET)](data/projects/netnet.md) | 7.5 | 7.0 | live | $500 | $5,000 | Reserve fund สไตล์ OlympusDAO v1 บน Robinhood Chain ที่โปร่งใสเกินมาตรฐานโครงการแนวนี้: มี prospectus ฉบับจริงบอกสูตร… |
+| 3 | [Pull.Fun (+ $TAKO)](data/projects/pullfun.md) | 6.5 | 4.5 | live (store | $10 | $500 | ร้านเปิด pack การ์ดสแล็บจริงที่จริงจังด้าน UX — odds เปิดเผย, fair commit-reveal (off-chain), KYC, Stripe, ToS มีเนื้… |
 | 4 | [TRACE](data/projects/trace.md) | 4.5 | 4.0 | live collection | $50 | $200 | NFT collection ที่ on-chain มีจริงแต่ proxy ไม่ตรงกับที่เว็บแสดง; floor 0.0108 ETH, volume 7 วัน 59.39 ETH; โปรเจกต์ก… |
 | 5 | [Clickihood](data/projects/clickihood.md) | 4.0 | 3.0 | mint เสร็จ | $0 | $50 | Free mint 9,999 ที่ metadata ยัง unfrozen และ contract ไม่มีเงิน (0 ETH) — on-chain โปร่งใสดี (holder 711, top-10 29.… |
 | 6 | [HYPEST](data/projects/hypest.md) | 3.5 | 3.0 | leaderboard เปิด | $0 | $0 | ระบบ leaderboard 400 ใบแบบ non-transferable (ตรวจสอบได้) ที่โฆษณา pool $HYPE 690 ล้านเหรียญที่ยัง 'ไม่เปิดใช้งาน' — โ… |
@@ -24,7 +24,7 @@
 | งบ | Renaiss | NetNet Capital Management ($NET) | Pull.Fun (+ $TAKO) | TRACE | Clickihood | HYPEST | Agnt | MemeBitcoin |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:
 | $0 | +0 | +0 | -1 | +0 | +0 | +0 | +0 | +0 |
-| $100 | -6 | -10 | -12 | -5 | -10 | -100 | -40 | -100 |
+| $100 | -6 | -10 | -11 | -5 | -10 | -100 | -40 | -100 |
 | $500 | -18 | -49 | -53 | -20 | -40 | +0 | -200 | -500 |
 | $1,000 | -60 | -98 | -106 | -200 | -300 | +0 | -400 | -1,000 |
 | $5,000 | -60 | -488 | -530 | -1,200 | +0 | +0 | -2,000 | -5,000 |
